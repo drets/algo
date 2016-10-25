@@ -7,6 +7,4 @@ def bin_modular_pow(a, n, m):
         n >>= 1
     return res
 
-print(bin_modular_pow(3,pow(10,100), 4*(pow(5,14)))
-#3574218752
-#2^(3^(10^100))
+assert bin_modular_pow(2,pow(3,100),100000) == 58752
