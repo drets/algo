@@ -53,4 +53,3 @@ def dijkstra_2(g): # O(m*logn)
     return retrieve_paths(d,p,n)
 
 assert dijkstra(g) == dijkstra_2(g) == [(0, [0]), (7, [1, 0]), (9, [2, 0]), (20, [3, 2, 0]), (20, [4, 5, 2, 0]), (11, [5, 2, 0])]
-
