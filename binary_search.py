@@ -1,10 +1,8 @@
-from math import floor
-
 def binary_search_rec(a,t):
     def binary_search_rec(a,t,l,r):
         if (l>r):
             return -1
-        m = floor((l+r)/2)
+        m = (l+r)//2
         if a[m]==t:
             return m
         elif a[m]>t:
@@ -17,7 +15,7 @@ def binary_search(a,t):
     l = 0
     r = len(a) - 1
     while l<=r:
-        m = floor((l+r)/2)
+        m = (l+r)//2
         if a[m]==t:
             return m
         elif a[m]>t:
