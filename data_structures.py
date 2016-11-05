@@ -86,7 +86,7 @@ def max_heapify(a,i):
         max_heapify(a,largest)
 
 def build_max_heap(a):
-    for i in range(len(a)/2-1,-1,-1):
+    for i in range(len(a)//2-1,-1,-1):
         max_heapify(a,i)
 
 a=[4,1,3,2,16,9,10,14,8,7]

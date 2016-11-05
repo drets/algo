@@ -19,7 +19,6 @@ def quick_sort(lst):
 assert quick_sort([12,3,4,5,7,1,17]) == [1, 3, 4, 5, 7, 12, 17]
 
 def partition(lst,l,r):
-    print(lst,l,r)
     pivot=l
     for i in range(l+1,r+1):
         if lst[i] <= lst[l]:

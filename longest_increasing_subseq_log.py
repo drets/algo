@@ -38,7 +38,7 @@ def longest_increasing_subseg_2(a):
             if d[j-1]<a[i] and a[i]<d[j]:
                 d[j]=a[i]
 
-    return len(filter(lambda n: n not in [float('inf'), float('-inf')], d))
+    return len(list(filter(lambda n: n not in [float('inf'), float('-inf')], d)))
 
 assert longest_increasing_subseg_2([6,5,3,2,1,2,1,2,5])==3
 
@@ -55,6 +55,7 @@ def longest_increasing_subseg_log(a):
         if d[j-1]<a[i] and a[i]<d[j]:
             d[j]=a[i]
 
-    return len(filter(lambda n: n not in [float('inf'),0], d))
+    return len(list(filter(lambda n: n not in [float('inf'),0], d)))
+
 
 assert longest_increasing_subseg_log([6,5,3,2,1,2,1,2,5])==3

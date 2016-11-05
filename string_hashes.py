@@ -23,10 +23,10 @@ def find_the_same_strings(xs):
     i,j=1,0
     while True:
         if i>=n:
-            res.insert(0,map(lambda tpl : tpl[1], hashes[j:i]))
+            res.insert(0,list(map(lambda tpl : tpl[1], hashes[j:i])))
             break
         if hashes[i][0]!=hashes[j][0]:
-            res.append(map(lambda tpl : tpl[1], hashes[j:i]))
+            res.append(list(map(lambda tpl : tpl[1], hashes[j:i])))
             j=i
         i+=1
     return res
@@ -53,9 +53,9 @@ def substrings_equal(s,i1,i2,length):
     return i1<i2 and h1*p_pow[i2-i1]==h2 or \
         i1>i2 and h1==h2*p_pow[i1-i2]
 
-assert substrings_equal("abcabc",0,3,3)  == True
-assert substrings_equal("abceabc",0,4,3) == True
-assert substrings_equal("abcabce",0,4,3) == False
+assert substrings_equal("abcabc",0,3,3)
+assert substrings_equal("abceabc",0,4,3)
+assert not substrings_equal("abcabce",0,4,3)
 
 def count_substrings(s):
     n=len(s)
